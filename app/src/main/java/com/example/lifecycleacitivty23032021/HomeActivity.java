@@ -8,21 +8,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
-    Button mBtnNavigateScreen2;
-
+    Button mBtnNavigateScreen3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d("BBB","Main : onCreate");
-        mBtnNavigateScreen2 = findViewById(R.id.buttonNavigateScreen2);
+        setContentView(R.layout.activity_home);
+        mBtnNavigateScreen3 = findViewById(R.id.buttonNavigateScreen3);
+        Log.d("BBB","Home : onCreate");
 
-        mBtnNavigateScreen2.setOnClickListener(new View.OnClickListener() {
+        mBtnNavigateScreen3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                Intent intent = new Intent(HomeActivity.this,ListActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,36 +30,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("BBB","Main : onStart");
+        Log.d("BBB","Home : onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("BBB","Main : onResume");
+        Log.d("BBB","Home : onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("BBB","Main : onPause");
+        Log.d("BBB","Home : onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("BBB","Main : onStop");
+        Log.d("BBB","Home : onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("BBB","Main : onRestart");
+        Log.d("BBB","Home : onRestart");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("BBB","Main : onDestroy");
+        Log.d("BBB","Home : onDestroy");
     }
 }

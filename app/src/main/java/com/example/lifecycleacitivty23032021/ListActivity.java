@@ -8,59 +8,52 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity {
 
-    Button mBtnNavigateScreen2;
-
+    Button mBtnNavigateScreen1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d("BBB","Main : onCreate");
-        mBtnNavigateScreen2 = findViewById(R.id.buttonNavigateScreen2);
+        setContentView(R.layout.activity_list);
 
-        mBtnNavigateScreen2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-                startActivity(intent);
-            }
-        });
+        mBtnNavigateScreen1 = findViewById(R.id.buttonNavigateScreen1);
+        Log.d("BBB","List : onCreate");
+
+
     }
-
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("BBB","Main : onStart");
+        Log.d("BBB","List : onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("BBB","Main : onResume");
+        Log.d("BBB","List : onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("BBB","Main : onPause");
+        Log.d("BBB","List : onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("BBB","Main : onStop");
+        Log.d("BBB","List : onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("BBB","Main : onRestart");
+        Log.d("BBB","List : onRestart");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("BBB","Main : onDestroy");
+        Log.d("BBB","List : onDestroy");
     }
 }
